@@ -1,0 +1,35 @@
+
+{
+      "soccer": {
+        "name": "soccer",
+        "subscribers": 3250000,
+        "description": "The home of football (soccer) discussion from around the world.",
+        "posts": [
+          { "title": "Champions League quarterfinal predictions", "author": "u/footyfan92" },
+          { "title": "Best goals of the season so far?", "author": "u/goalhunter" },
+          { "title": "Is VAR improving the game?", "author": "u/refwatch" }
+        ]
+      },
+    "horses": {
+      "name": "horses",
+      "subscribers": 185000,
+      "description": "Everything about horses, riding, care, and equestrian sports.",
+      "posts": [
+        { "title": "Best beginner horse breeds?", "author": "u/stablelife" },
+        { "title": "How often should you groom a horse?", "author": "u/hoofcare" },
+        { "title": "English vs Western riding pros and cons", "author": "u/saddletalk" }
+      ]
+    },
+    "coding": {
+      "name": "coding",
+      "subscribers": 4200000,
+      "description": "A place to discuss programming, software development, and careers in tech.",
+      "posts": [
+        { "title": "Best language to learn first in 2026?", "author": "u/devnewbie" },
+        { "title": "React vs Vue vs Svelte in real projects", "author": "u/frameworkwar" },
+        { "title": "How to stay motivated while learning to code", "author": "u/bugfixer" }
+      ]
+  }
+}
+
+  
