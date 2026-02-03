@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Coding News</title>
+</head>
+
+<body>
+    <main>
+        <h1>Coding Newbies Board</h1>
+        <h2>Small wins, big bugs, no judgment</h2>
+        <a class="actions" href="/comments/new">Post a Thought</a>
+        <section>
+            <% for(let c of comments){%>
+                <div class="comment">
+                    <div class="username">
+                        <%=c.comment%>
+                    </div>
+                    <div class="body">
+                        <%=c.username%>
+                    </div>
+                    <a href="/comments/<%= c.id %>">Comment Details</a>
+                </div>
+                <% } %>
+        </section>
+    </main>
+</body>
+
+</html>

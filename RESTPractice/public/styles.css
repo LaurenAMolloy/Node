@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+main {
+    max-width: 720px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 2rem;
+}
+
+.comment {
+    background: #020617;
+    border: 1px solid #1e293b;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.username {
+    font-size: 0.85rem;
+    color: #38bdf8;
+    margin-bottom: 0.5rem;
+}
+
+.body {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.actions {
+    margin-top: 0.75rem;
+}
+
+a,
+button {
+    background: transparent;
+    border: none;
+    font-size: 0.8rem;
+    margin-right: 0.75rem;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #38bdf8;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+    width: 25%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+a:hover,
+button:hover {
+    color: #e5e7eb;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 350px;
+    border: 2px solid #38bdf8;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 2rem;
+    gap: 10px;
+}

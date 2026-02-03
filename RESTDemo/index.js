@@ -12,6 +12,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 app.set('views', path.join(__dirname, 'views'))
+
 //When I render a view use ejs as a template
 app.set('view engine', 'ejs')
 
@@ -43,7 +44,7 @@ app.get('/comments/new', (req, res) => {
 })
 
 app.post('/comments', (req, res) => {
-    const {username, comment} = req.body;
+    const { username, comment } = req.body;
     comments.push({ username, comment, id: uuidv() })
     //Thanks for the data now make a GET request for the comments
     //This causes a new GET to comments and displays the new list
