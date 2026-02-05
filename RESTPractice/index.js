@@ -4,13 +4,15 @@ const app = express();
 const path = require('path');
 const { v4: uuidv4 } = require("uuid");
 
+//This allows us to overide post methods in our form
 app.use(methodOverride('_method'));
 
 //serve static files
 app.use(express.static('public'));
 
 //Middleware
-app.use(express.urlencoded({ extended: true }))
+app.use(express.urlencoded({ extended: true }));
+
 //parses data from json formats
 app.use(express.json())
 
@@ -20,7 +22,7 @@ app.set('views', path.join(__dirname, '/views'))
 app.set('view engine', 'ejs');
 
 //Comments array - Make sure each comment has a UUID
-const comments = [
+let comments = [
     { 
       id: uuidv4(),
       username: "confusedCoder42",
@@ -53,6 +55,7 @@ const comments = [
     }
   ];
 
+//RESTFUL Routes
 // GET /comments - list all comments
 // POST /comments - Create a new comment
 // GET /comments/:id - Get one comment (using ID)
@@ -62,6 +65,7 @@ const comments = [
 
 //Create a route to view comments
 //Pass and Loop over Comments
+//get HTTP method "I want DATA!"
 app.get('/comments', (req, res) => {
  res.render('comments/index', { comments })
 })
@@ -113,6 +117,21 @@ app.patch('/comments/:id', (req, res) => {
     //Redirect
     res.redirect('/comments')
 })
+
+//Create Route to Delete
+//Filter the comments list
+//path /comments/:id 
+//Final step!
+app.delete('/comments/:id', ( req, res) => {
+  //Take id from path
+  const { id } = req.params
+  //Do not mutate the original
+  comments = comments.filter((comment) => {
+    return comment.id !== id
+  });
+  res.redirect('/comments')
+})
+
 
 app.listen('8000', () => {
     console.log("Listening on port 8000")

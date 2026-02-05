@@ -11,14 +11,16 @@
 <body>
     <main>
         <div>
-            <h1>Comment id: <%= comment.id %>
-            </h1>
+            <h1>Comment Details</h1>
             <p>
                 <%= comment.comment %> - <%= comment.username %>
             </p>
         </div>
         <a href="/comments">Back to comments</a>
         <a href="/comments/<%= comment.id%>/edit">Edit Comment</a>
+        <form class="delete-form" method="POST" action="/comments/<%= comment.id %>?_method=DELETE">
+            <button>Delete</button>
+        </form>
     </main>
 </body>
 
